@@ -25,7 +25,6 @@ class ProductTableViewController: UITableViewController, URLSessionDelegate {
             //let str = (mtype! + mtype!.isEqual(type))as! String
             if mtype!.isEqual(type) {
                 Products.append(model)
-                
             }
         }
         self.tableView.reloadData()
@@ -68,7 +67,7 @@ class ProductTableViewController: UITableViewController, URLSessionDelegate {
         cell.text_price.text = large + " " + medium + " " +  small
         if Products[index].image_url != "null" {
             let url = Products[index].image_url
-            
+            cell.indicator_image.startAnimating()
             let sessionWithConfigure = URLSessionConfiguration.default
             
             let session = Foundation.URLSession(configuration: sessionWithConfigure, delegate: self, delegateQueue: OperationQueue.main)
@@ -77,6 +76,7 @@ class ProductTableViewController: UITableViewController, URLSessionDelegate {
             
             let dataTask = session.downloadTask(with: URL(string: url!)!, completionHandler: {(data, response, error) -> Void in
                 guard let imageData = try? Data(contentsOf: data!) else {
+                    cell.indicator_image.stopAnimating()
                     return
                 }
                 let image = UIImage(data: imageData)
@@ -84,10 +84,13 @@ class ProductTableViewController: UITableViewController, URLSessionDelegate {
                     cell.image_main.image = image
                     
                 }
+                cell.indicator_image.stopAnimating()
             })
             
             dataTask.resume()
             
+        }else{
+            cell.indicator_image.stopAnimating()
         }
         
         // Configure the cell...

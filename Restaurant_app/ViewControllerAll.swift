@@ -15,8 +15,7 @@ class ViewControllerAll: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getTypeData()
-        getProductData()
+        self.tableView.reloadData()
         // Do any additional setup after loading the view.
     }
     
@@ -43,84 +42,6 @@ class ViewControllerAll: UITableViewController {
         quetion.addAction(OKaction);
         //Show
         self.present(quetion, animated: true, completion: nil);
-    }
-    func getTypeData(){
-        var ref: FIRDatabaseReference!
-        ref = FIRDatabase.database().reference()
-        /*let userID = FIRAuth.auth()?.currentUser?.uid*/
-        ref.child("type").observeSingleEvent(of: .value, with: { (snapshot) in
-            
-            var str = ""
-            print( "firebaseData :" + snapshot.key)
-            //let value = snapshot.value as? NSDictionary
-            if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
-                
-                for snap in snapshots {
-                    
-                    // Make our jokes array for the tableView.
-                    if let postDictionary = snap.value as? Dictionary<String, AnyObject> {
-                        let key = snap.key
-                        //let joke = Joke(key: key, dictionary: postDictionary)
-                        let value = postDictionary as? NSDictionary
-                        let chtname = value?["chtName"] as? String ?? ""
-                        // Items are returned chronologically, but it's more fun with the newest jokes first.
-                        str = chtname
-                        types.append(str)
-                        print( "firebaseData :" + key + ":" + chtname)
-                        //self.jokes.insert(joke, atIndex: 0)
-                    }
-                }
-                self.tableView.reloadData()
-                
-            }
-            
-            //self.showOKDialog(title:"data",message:username,OKtitle:"OK")
-            
-        }) { (error) in
-            print(error.localizedDescription)
-        }
-    }
-    
-    func getProductData(){
-        var ref: FIRDatabaseReference!
-        ref = FIRDatabase.database().reference()
-        /*let userID = FIRAuth.auth()?.currentUser?.uid*/
-        ref.child("menus").observeSingleEvent(of: .value, with: { (snapshot) in
-            
-            print( "firebaseData :" + snapshot.key)
-            //let value = snapshot.value as? NSDictionary
-            if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
-                
-                for snap in snapshots {
-                    // Make our jokes array for the tableView.
-                    if let postDictionary = snap.value as? Dictionary<String, AnyObject> {
-                        let key = snap.key
-                        let model = Product()
-                        let value = postDictionary as? NSDictionary
-                        let price = postDictionary["price"] as? NSDictionary
-                        model.name = value?["name"] as? String ?? "null"
-                        model.status = value?["status"] as? Bool ?? false
-                        model.image_url = value?["image_url"] as? String ?? "null"
-                        model.type = value?["type"] as? String ?? "null"
-                        model.price_large = price?["large"] as? Int ?? 0
-                        model.price_small = price?["small"] as? Int ?? 0
-                        model.price_medium = price?["medium"] as? Int ?? 0
-                        model.single = price?["single"] as? Bool ?? false
-                        
-                        products.append(model)
-                        print( "firebaseData :" + key + ":" + model.name!)
-                        //self.jokes.insert(joke, atIndex: 0)
-                    }
-                }
-                self.tableView.reloadData()
-                
-            }
-            
-            //self.showOKDialog(title:"data",message:username,OKtitle:"OK")
-            
-        }) { (error) in
-            print(error.localizedDescription)
-        }
     }
 
     

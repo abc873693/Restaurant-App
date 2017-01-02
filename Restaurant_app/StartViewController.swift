@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 class StartViewController: UIViewController {
     var username = "abc873693@rainvisitor.com"
@@ -25,7 +26,8 @@ class StartViewController: UIViewController {
                 quetion.addAction(OKaction);
                 //Show
                 self.present(quetion, animated: true, completion: nil);*/
-                self.performSegue(withIdentifier: "into_menu", sender: self)
+                self.getTypeData()
+                self.getProductData()
             }
             else {
                 let quetion = UIAlertController(title: "firebase", message: "創建失敗", preferredStyle: .alert);
@@ -45,7 +47,83 @@ class StartViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func getTypeData(){
+        var ref: FIRDatabaseReference!
+        ref = FIRDatabase.database().reference()
+        /*let userID = FIRAuth.auth()?.currentUser?.uid*/
+        ref.child("type").observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            var str = ""
+            print( "firebaseData :" + snapshot.key)
+            //let value = snapshot.value as? NSDictionary
+            if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                
+                for snap in snapshots {
+                    
+                    // Make our jokes array for the tableView.
+                    if let postDictionary = snap.value as? Dictionary<String, AnyObject> {
+                        let key = snap.key
+                        //let joke = Joke(key: key, dictionary: postDictionary)
+                        let value = postDictionary as? NSDictionary
+                        let chtname = value?["chtName"] as? String ?? ""
+                        // Items are returned chronologically, but it's more fun with the newest jokes first.
+                        str = chtname
+                        types.append(str)
+                        print( "firebaseData :" + key + ":" + chtname)
+                        //self.jokes.insert(joke, atIndex: 0)
+                    }
+                }
+                
+            }
+            
+            //self.showOKDialog(title:"data",message:username,OKtitle:"OK")
+            
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+    }
     
+    func getProductData(){
+        var ref: FIRDatabaseReference!
+        ref = FIRDatabase.database().reference()
+        /*let userID = FIRAuth.auth()?.currentUser?.uid*/
+        ref.child("menus").observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            print( "firebaseData :" + snapshot.key)
+            //let value = snapshot.value as? NSDictionary
+            if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                
+                for snap in snapshots {
+                    // Make our jokes array for the tableView.
+                    if let postDictionary = snap.value as? Dictionary<String, AnyObject> {
+                        let key = snap.key
+                        let model = Product()
+                        let value = postDictionary as? NSDictionary
+                        let price = postDictionary["price"] as? NSDictionary
+                        model.uid = snap.key
+                        model.name = value?["name"] as? String ?? "null"
+                        model.status = value?["status"] as? Bool ?? false
+                        model.image_url = value?["image_url"] as? String ?? "null"
+                        model.type = value?["type"] as? String ?? "null"
+                        model.price_large = price?["large"] as? Int ?? 0
+                        model.price_small = price?["small"] as? Int ?? 0
+                        model.price_medium = price?["medium"] as? Int ?? 0
+                        model.single = price?["single"] as? Bool ?? false
+                        
+                        products.append(model)
+                        print( "firebaseData :" + key + ":" + model.name!)
+                        //self.jokes.insert(joke, atIndex: 0)
+                    }
+                }
+                self.performSegue(withIdentifier: "into_menu", sender: self)
+            }
+            
+            //self.showOKDialog(title:"data",message:username,OKtitle:"OK")
+            
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+    }
     
 }
 

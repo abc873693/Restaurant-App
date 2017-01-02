@@ -1,24 +1,24 @@
 //
-//  ViewControllerLonin.swift
+//  LoginViewController.swift
 //  Restaurant_app
 //
-//  Created by Ray on 2016/12/28.
-//  Copyright © 2016年 kuas. All rights reserved.
+//  Created by Ray on 2017/1/2.
+//  Copyright © 2017年 kuas. All rights reserved.
 //
 
 import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 
-class ViewControllerLonin: UIViewController {
-    var username = "abc873693@rainvisitor.com"
-    var password = "123456"
+class LoginViewController: UIViewController {
     var ref: FIRDatabaseReference!
     
-    
+    @IBOutlet weak var edit_username: UITextField!
+    @IBOutlet weak var edit_password: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "後台登入"
         ref = FIRDatabase.database().reference()
         // Do any additional setup after loading the view.
     }
@@ -28,21 +28,21 @@ class ViewControllerLonin: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func register(_ sender: Any) {
-        print("456")
+    @IBAction func Action_Login(_ sender: Any) {
+        let username = edit_username.text
+        let password = edit_password.text
+        login(username:username!,password:password!)
+    }
+    
+    
+    
+    func login(username:String,password:String) -> Void {
         FIRAuth.auth()?.signIn(withEmail: username, password: password) { (user, error) in
             if user?.email != nil {
-                let quetion = UIAlertController(title: "firebase", message: "登入成功", preferredStyle: .alert);
-                //新增選項
-                let OKaction = UIAlertAction(title: "好", style: .default , handler:nil);
-                //把選項加到UIAlertController
-                quetion.addAction(OKaction);
-                //Show
-                self.present(quetion, animated: true, completion: nil);
-                self.ref.child("users").child((user?.uid)!).setValue(["username": self.username])
+                self.performSegue(withIdentifier: "login", sender: self)
             }
             else {
-                let quetion = UIAlertController(title: "firebase", message: "創建失敗", preferredStyle: .alert);
+                let quetion = UIAlertController(title: "訊息", message: "登入失敗", preferredStyle: .alert);
                 //新增選項
                 let OKaction = UIAlertAction(title: "好", style: .default , handler:nil);
                 //把選項加到UIAlertController
@@ -51,14 +51,10 @@ class ViewControllerLonin: UIViewController {
                 self.present(quetion, animated: true, completion: nil);
             }
         }
-
     }
-    @IBAction func logout(_ sender: Any) {
-        /*indicator.isHidden = false
-        indicator.startAnimating()*/
-                /*indicator.stopAnimating()
-        indicator.isHidden = true*/
-    }
+    
+    
+    
     /*
     // MARK: - Navigation
 

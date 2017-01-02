@@ -7,11 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		711C5A001E19377600BC6C30 /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711C59FF1E19377600BC6C30 /* OrderTableViewCell.swift */; };
+		71270E9A1E1957D100124B92 /* MyList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71270E991E1957D100124B92 /* MyList.plist */; };
+		71270E9D1E1A296200124B92 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71270E9C1E1A296200124B92 /* LoginViewController.swift */; };
+		71270E9F1E1A2C5800124B92 /* BackStageMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71270E9E1E1A2C5800124B92 /* BackStageMainViewController.swift */; };
 		714E44AC1E14DB7E006189B8 /* TypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714E44AB1E14DB7E006189B8 /* TypeTableViewCell.swift */; };
 		714E44AE1E14E434006189B8 /* ProductTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714E44AD1E14E434006189B8 /* ProductTableViewController.swift */; };
-		714E44B11E14F514006189B8 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714E44B01E14F514006189B8 /* Product.swift */; };
+		714E44B11E14F514006189B8 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714E44B01E14F514006189B8 /* Model.swift */; };
 		714E44B41E14FDD8006189B8 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714E44B31E14FDD8006189B8 /* ProductTableViewCell.swift */; };
 		714E44D91E15895E006189B8 /* DetailProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714E44D81E15895E006189B8 /* DetailProductViewController.swift */; };
+		714E44DC1E160857006189B8 /* FanPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714E44DB1E160857006189B8 /* FanPageTableViewController.swift */; };
+		714E44DE1E16B26D006189B8 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714E44DD1E16B26D006189B8 /* PostTableViewCell.swift */; };
+		714E44E11E17ACBB006189B8 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714E44E01E17ACBB006189B8 /* OrderViewController.swift */; };
+		714E44E31E17B04E006189B8 /* ChildOrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714E44E21E17B04E006189B8 /* ChildOrderTableViewController.swift */; };
+		714E44E51E18F1DB006189B8 /* ChildOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714E44E41E18F1DB006189B8 /* ChildOrderTableViewCell.swift */; };
+		714E44E71E1909C7006189B8 /* ComfirmTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714E44E61E1909C7006189B8 /* ComfirmTableViewController.swift */; };
 		71689CBA1E13D975006F627C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71689CB91E13D975006F627C /* AppDelegate.swift */; };
 		71689CBC1E13D975006F627C /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71689CBB1E13D975006F627C /* StartViewController.swift */; };
 		71689CBF1E13D975006F627C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71689CBD1E13D975006F627C /* Main.storyboard */; };
@@ -29,16 +39,26 @@
 		71689CE21E13F4B5006F627C /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71689CD91E13F4B5006F627C /* GoogleToolboxForMac.framework */; };
 		71689CE31E13F4B5006F627C /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71689CDA1E13F4B5006F627C /* GTMSessionFetcher.framework */; };
 		71689CE71E13F7A6006F627C /* ViewControllerAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71689CE61E13F7A6006F627C /* ViewControllerAll.swift */; };
-		71689CE91E13FE79006F627C /* ViewControllerLonin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71689CE81E13FE79006F627C /* ViewControllerLonin.swift */; };
+		71689CE91E13FE79006F627C /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71689CE81E13FE79006F627C /* SettingViewController.swift */; };
 		71689CEB1E14A1FE006F627C /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71689CEA1E14A1FE006F627C /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		711C59FF1E19377600BC6C30 /* OrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
+		71270E991E1957D100124B92 /* MyList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = MyList.plist; path = ../MyList.plist; sourceTree = "<group>"; };
+		71270E9C1E1A296200124B92 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		71270E9E1E1A2C5800124B92 /* BackStageMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackStageMainViewController.swift; sourceTree = "<group>"; };
 		714E44AB1E14DB7E006189B8 /* TypeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeTableViewCell.swift; sourceTree = "<group>"; };
 		714E44AD1E14E434006189B8 /* ProductTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTableViewController.swift; sourceTree = "<group>"; };
-		714E44B01E14F514006189B8 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		714E44B01E14F514006189B8 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		714E44B31E14FDD8006189B8 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		714E44D81E15895E006189B8 /* DetailProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailProductViewController.swift; sourceTree = "<group>"; };
+		714E44DB1E160857006189B8 /* FanPageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FanPageTableViewController.swift; sourceTree = "<group>"; };
+		714E44DD1E16B26D006189B8 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		714E44E01E17ACBB006189B8 /* OrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		714E44E21E17B04E006189B8 /* ChildOrderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildOrderTableViewController.swift; sourceTree = "<group>"; };
+		714E44E41E18F1DB006189B8 /* ChildOrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildOrderTableViewCell.swift; sourceTree = "<group>"; };
+		714E44E61E1909C7006189B8 /* ComfirmTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComfirmTableViewController.swift; sourceTree = "<group>"; };
 		71689CB61E13D975006F627C /* Restaurant_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Restaurant_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71689CB91E13D975006F627C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71689CBB1E13D975006F627C /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -59,7 +79,7 @@
 		71689CD91E13F4B5006F627C /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleToolboxForMac.framework; sourceTree = "<group>"; };
 		71689CDA1E13F4B5006F627C /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GTMSessionFetcher.framework; sourceTree = "<group>"; };
 		71689CE61E13F7A6006F627C /* ViewControllerAll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerAll.swift; sourceTree = "<group>"; };
-		71689CE81E13FE79006F627C /* ViewControllerLonin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerLonin.swift; path = ../ViewControllerLonin.swift; sourceTree = "<group>"; };
+		71689CE81E13FE79006F627C /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = ../SettingViewController.swift; sourceTree = "<group>"; };
 		71689CEA1E14A1FE006F627C /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,10 +103,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		71270E9B1E1A28DD00124B92 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				71689CE81E13FE79006F627C /* SettingViewController.swift */,
+				71270E9C1E1A296200124B92 /* LoginViewController.swift */,
+				71270E9E1E1A2C5800124B92 /* BackStageMainViewController.swift */,
+			);
+			name = Setting;
+			sourceTree = "<group>";
+		};
 		714E44AF1E14F47E006189B8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				714E44B01E14F514006189B8 /* Product.swift */,
+				714E44B01E14F514006189B8 /* Model.swift */,
+				71689CEA1E14A1FE006F627C /* Utils.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -101,6 +132,27 @@
 				714E44D81E15895E006189B8 /* DetailProductViewController.swift */,
 			);
 			name = Menus;
+			sourceTree = "<group>";
+		};
+		714E44DA1E160833006189B8 /* FansPage */ = {
+			isa = PBXGroup;
+			children = (
+				714E44DB1E160857006189B8 /* FanPageTableViewController.swift */,
+				714E44DD1E16B26D006189B8 /* PostTableViewCell.swift */,
+			);
+			name = FansPage;
+			sourceTree = "<group>";
+		};
+		714E44DF1E17AC97006189B8 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				714E44E01E17ACBB006189B8 /* OrderViewController.swift */,
+				714E44E21E17B04E006189B8 /* ChildOrderTableViewController.swift */,
+				714E44E41E18F1DB006189B8 /* ChildOrderTableViewCell.swift */,
+				714E44E61E1909C7006189B8 /* ComfirmTableViewController.swift */,
+				711C59FF1E19377600BC6C30 /* OrderTableViewCell.swift */,
+			);
+			name = Order;
 			sourceTree = "<group>";
 		};
 		71689CAD1E13D975006F627C = {
@@ -124,17 +176,19 @@
 			isa = PBXGroup;
 			children = (
 				714E44B21E14F721006189B8 /* Menus */,
+				714E44DF1E17AC97006189B8 /* Order */,
+				714E44DA1E160833006189B8 /* FansPage */,
 				714E44AF1E14F47E006189B8 /* Models */,
+				71270E9B1E1A28DD00124B92 /* Setting */,
 				71689CB91E13D975006F627C /* AppDelegate.swift */,
 				71689CBB1E13D975006F627C /* StartViewController.swift */,
-				71689CE81E13FE79006F627C /* ViewControllerLonin.swift */,
 				71689CBD1E13D975006F627C /* Main.storyboard */,
 				71689CC31E13D975006F627C /* Assets.xcassets */,
 				71689CC51E13D975006F627C /* LaunchScreen.storyboard */,
 				71689CC81E13D975006F627C /* Info.plist */,
+				71270E991E1957D100124B92 /* MyList.plist */,
 				71689CC01E13D975006F627C /* Restaurant_app.xcdatamodeld */,
 				71689CCE1E13DCB0006F627C /* GoogleService-Info.plist */,
-				71689CEA1E14A1FE006F627C /* Utils.swift */,
 			);
 			path = Restaurant_app;
 			sourceTree = "<group>";
@@ -215,6 +269,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71270E9A1E1957D100124B92 /* MyList.plist in Resources */,
 				71689CC71E13D975006F627C /* LaunchScreen.storyboard in Resources */,
 				71689CCF1E13DCB0006F627C /* GoogleService-Info.plist in Resources */,
 				71689CC41E13D975006F627C /* Assets.xcassets in Resources */,
@@ -229,13 +284,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				714E44E31E17B04E006189B8 /* ChildOrderTableViewController.swift in Sources */,
+				714E44DC1E160857006189B8 /* FanPageTableViewController.swift in Sources */,
 				71689CC21E13D975006F627C /* Restaurant_app.xcdatamodeld in Sources */,
+				714E44DE1E16B26D006189B8 /* PostTableViewCell.swift in Sources */,
+				71270E9D1E1A296200124B92 /* LoginViewController.swift in Sources */,
 				71689CBC1E13D975006F627C /* StartViewController.swift in Sources */,
-				714E44B11E14F514006189B8 /* Product.swift in Sources */,
+				714E44E11E17ACBB006189B8 /* OrderViewController.swift in Sources */,
+				71270E9F1E1A2C5800124B92 /* BackStageMainViewController.swift in Sources */,
+				711C5A001E19377600BC6C30 /* OrderTableViewCell.swift in Sources */,
+				714E44B11E14F514006189B8 /* Model.swift in Sources */,
 				71689CE71E13F7A6006F627C /* ViewControllerAll.swift in Sources */,
+				714E44E71E1909C7006189B8 /* ComfirmTableViewController.swift in Sources */,
 				71689CBA1E13D975006F627C /* AppDelegate.swift in Sources */,
-				71689CE91E13FE79006F627C /* ViewControllerLonin.swift in Sources */,
+				71689CE91E13FE79006F627C /* SettingViewController.swift in Sources */,
 				71689CEB1E14A1FE006F627C /* Utils.swift in Sources */,
+				714E44E51E18F1DB006189B8 /* ChildOrderTableViewCell.swift in Sources */,
 				714E44B41E14FDD8006189B8 /* ProductTableViewCell.swift in Sources */,
 				714E44AE1E14E434006189B8 /* ProductTableViewController.swift in Sources */,
 				714E44D91E15895E006189B8 /* DetailProductViewController.swift in Sources */,

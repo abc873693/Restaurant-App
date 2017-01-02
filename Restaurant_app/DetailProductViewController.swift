@@ -12,6 +12,7 @@ class DetailProductViewController: UIViewController,URLSessionDelegate {
 
     var item:Product!
     
+    @IBOutlet weak var indocator_image: UIActivityIndicatorView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var product_image: UIImageView!
     @IBOutlet weak var price_large: UILabel!
@@ -24,6 +25,7 @@ class DetailProductViewController: UIViewController,URLSessionDelegate {
         price_large.text = String(item.price_large!)
         price_medium.text = String(item.price_medium!)
         price_small.text = String(item.price_small!)
+        indocator_image.startAnimating()
         if self.item.image_url != "null" {
             let url = self.item.image_url
             
@@ -35,6 +37,7 @@ class DetailProductViewController: UIViewController,URLSessionDelegate {
             
             let dataTask = session.downloadTask(with: URL(string: url!)!, completionHandler: {(data, response, error) -> Void in
                 guard let imageData = try? Data(contentsOf: data!) else {
+                    self.indocator_image.stopAnimating()
                     return
                 }
                 let image = UIImage(data: imageData)
@@ -42,10 +45,14 @@ class DetailProductViewController: UIViewController,URLSessionDelegate {
                     self.product_image.image = image
                     
                 }
+                self.indocator_image.stopAnimating()
             })
             
             dataTask.resume()
             
+        }
+        else {
+            self.indocator_image.stopAnimating()
         }
         // Do any additional setup after loading the view.
     }

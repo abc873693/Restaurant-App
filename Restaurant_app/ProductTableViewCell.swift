@@ -10,6 +10,7 @@ import UIKit
 
 class ProductTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var indicator_image: UIActivityIndicatorView!
     @IBOutlet weak var image_main: UIImageView!
     @IBOutlet weak var text_name: UILabel!
     @IBOutlet weak var text_price: UILabel!
