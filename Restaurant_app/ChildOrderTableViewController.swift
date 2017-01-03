@@ -16,6 +16,7 @@ class ChildOrderTableViewController: UITableViewController,URLSessionDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("viewDidLoad : \(self.title!)")
+        //type = types[Int(self.title!)!]
         type = self.title!
         for model in products {
             let mtype = model.type

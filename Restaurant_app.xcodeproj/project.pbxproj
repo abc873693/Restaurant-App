@@ -11,6 +11,12 @@
 		71270E9A1E1957D100124B92 /* MyList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71270E991E1957D100124B92 /* MyList.plist */; };
 		71270E9D1E1A296200124B92 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71270E9C1E1A296200124B92 /* LoginViewController.swift */; };
 		71270E9F1E1A2C5800124B92 /* BackStageMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71270E9E1E1A2C5800124B92 /* BackStageMainViewController.swift */; };
+		71270EA51E1BCAA100124B92 /* EditTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71270EA41E1BCAA100124B92 /* EditTypeViewController.swift */; };
+		71270EA71E1BCABA00124B92 /* EditProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71270EA61E1BCABA00124B92 /* EditProductViewController.swift */; };
+		71270EA91E1BCAE400124B92 /* OrderShowTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71270EA81E1BCAE400124B92 /* OrderShowTableViewController.swift */; };
+		71270EAB1E1BCB0B00124B92 /* OrderDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71270EAA1E1BCB0B00124B92 /* OrderDetailTableViewCell.swift */; };
+		71270EAD1E1C323D00124B92 /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71270EAC1E1C323D00124B92 /* OrderDetailViewController.swift */; };
+		71270EAF1E1C326800124B92 /* OrderProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71270EAE1E1C326800124B92 /* OrderProductTableViewCell.swift */; };
 		714E44AC1E14DB7E006189B8 /* TypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714E44AB1E14DB7E006189B8 /* TypeTableViewCell.swift */; };
 		714E44AE1E14E434006189B8 /* ProductTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714E44AD1E14E434006189B8 /* ProductTableViewController.swift */; };
 		714E44B11E14F514006189B8 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714E44B01E14F514006189B8 /* Model.swift */; };
@@ -48,6 +54,12 @@
 		71270E991E1957D100124B92 /* MyList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = MyList.plist; path = ../MyList.plist; sourceTree = "<group>"; };
 		71270E9C1E1A296200124B92 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		71270E9E1E1A2C5800124B92 /* BackStageMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackStageMainViewController.swift; sourceTree = "<group>"; };
+		71270EA41E1BCAA100124B92 /* EditTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTypeViewController.swift; sourceTree = "<group>"; };
+		71270EA61E1BCABA00124B92 /* EditProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProductViewController.swift; sourceTree = "<group>"; };
+		71270EA81E1BCAE400124B92 /* OrderShowTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderShowTableViewController.swift; sourceTree = "<group>"; };
+		71270EAA1E1BCB0B00124B92 /* OrderDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailTableViewCell.swift; sourceTree = "<group>"; };
+		71270EAC1E1C323D00124B92 /* OrderDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailViewController.swift; sourceTree = "<group>"; };
+		71270EAE1E1C326800124B92 /* OrderProductTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderProductTableViewCell.swift; sourceTree = "<group>"; };
 		714E44AB1E14DB7E006189B8 /* TypeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeTableViewCell.swift; sourceTree = "<group>"; };
 		714E44AD1E14E434006189B8 /* ProductTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTableViewController.swift; sourceTree = "<group>"; };
 		714E44B01E14F514006189B8 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -108,9 +120,22 @@
 			children = (
 				71689CE81E13FE79006F627C /* SettingViewController.swift */,
 				71270E9C1E1A296200124B92 /* LoginViewController.swift */,
-				71270E9E1E1A2C5800124B92 /* BackStageMainViewController.swift */,
 			);
 			name = Setting;
+			sourceTree = "<group>";
+		};
+		71270EA31E1BC9E600124B92 /* BackStage */ = {
+			isa = PBXGroup;
+			children = (
+				71270E9E1E1A2C5800124B92 /* BackStageMainViewController.swift */,
+				71270EA41E1BCAA100124B92 /* EditTypeViewController.swift */,
+				71270EA61E1BCABA00124B92 /* EditProductViewController.swift */,
+				71270EA81E1BCAE400124B92 /* OrderShowTableViewController.swift */,
+				71270EAA1E1BCB0B00124B92 /* OrderDetailTableViewCell.swift */,
+				71270EAC1E1C323D00124B92 /* OrderDetailViewController.swift */,
+				71270EAE1E1C326800124B92 /* OrderProductTableViewCell.swift */,
+			);
+			name = BackStage;
 			sourceTree = "<group>";
 		};
 		714E44AF1E14F47E006189B8 /* Models */ = {
@@ -175,11 +200,12 @@
 		71689CB81E13D975006F627C /* Restaurant_app */ = {
 			isa = PBXGroup;
 			children = (
-				714E44B21E14F721006189B8 /* Menus */,
 				714E44DF1E17AC97006189B8 /* Order */,
 				714E44DA1E160833006189B8 /* FansPage */,
-				714E44AF1E14F47E006189B8 /* Models */,
 				71270E9B1E1A28DD00124B92 /* Setting */,
+				71270EA31E1BC9E600124B92 /* BackStage */,
+				714E44B21E14F721006189B8 /* Menus */,
+				714E44AF1E14F47E006189B8 /* Models */,
 				71689CB91E13D975006F627C /* AppDelegate.swift */,
 				71689CBB1E13D975006F627C /* StartViewController.swift */,
 				71689CBD1E13D975006F627C /* Main.storyboard */,
@@ -287,23 +313,29 @@
 				714E44E31E17B04E006189B8 /* ChildOrderTableViewController.swift in Sources */,
 				714E44DC1E160857006189B8 /* FanPageTableViewController.swift in Sources */,
 				71689CC21E13D975006F627C /* Restaurant_app.xcdatamodeld in Sources */,
+				71270EAD1E1C323D00124B92 /* OrderDetailViewController.swift in Sources */,
 				714E44DE1E16B26D006189B8 /* PostTableViewCell.swift in Sources */,
 				71270E9D1E1A296200124B92 /* LoginViewController.swift in Sources */,
 				71689CBC1E13D975006F627C /* StartViewController.swift in Sources */,
 				714E44E11E17ACBB006189B8 /* OrderViewController.swift in Sources */,
+				71270EA91E1BCAE400124B92 /* OrderShowTableViewController.swift in Sources */,
 				71270E9F1E1A2C5800124B92 /* BackStageMainViewController.swift in Sources */,
+				71270EAF1E1C326800124B92 /* OrderProductTableViewCell.swift in Sources */,
 				711C5A001E19377600BC6C30 /* OrderTableViewCell.swift in Sources */,
 				714E44B11E14F514006189B8 /* Model.swift in Sources */,
+				71270EAB1E1BCB0B00124B92 /* OrderDetailTableViewCell.swift in Sources */,
 				71689CE71E13F7A6006F627C /* ViewControllerAll.swift in Sources */,
 				714E44E71E1909C7006189B8 /* ComfirmTableViewController.swift in Sources */,
 				71689CBA1E13D975006F627C /* AppDelegate.swift in Sources */,
 				71689CE91E13FE79006F627C /* SettingViewController.swift in Sources */,
+				71270EA71E1BCABA00124B92 /* EditProductViewController.swift in Sources */,
 				71689CEB1E14A1FE006F627C /* Utils.swift in Sources */,
 				714E44E51E18F1DB006189B8 /* ChildOrderTableViewCell.swift in Sources */,
 				714E44B41E14FDD8006189B8 /* ProductTableViewCell.swift in Sources */,
 				714E44AE1E14E434006189B8 /* ProductTableViewController.swift in Sources */,
 				714E44D91E15895E006189B8 /* DetailProductViewController.swift in Sources */,
 				714E44AC1E14DB7E006189B8 /* TypeTableViewCell.swift in Sources */,
+				71270EA51E1BCAA100124B92 /* EditTypeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

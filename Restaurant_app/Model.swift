@@ -21,6 +21,15 @@ public func searProduct(uid:String)-> Int{
     return -1
 }
 
+public func searType(name:String)-> Int{
+    for i in 0...(types.count-1) {
+        if types[i] == name{
+            return i
+        }
+    }
+    return -1
+}
+
 class Product {
     var uid:String?
     var name:String?
@@ -78,6 +87,7 @@ class SlectProduct {
     var amount:Int?
     var size:Int?
     var index:Int?
+    var state:Bool?
     init() {
         
     }

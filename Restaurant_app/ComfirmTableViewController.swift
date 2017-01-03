@@ -85,12 +85,14 @@ class ComfirmTableViewController: UITableViewController {
             break
         }
         let amount = orders[indexPath.row].amount! as Int
-        cell.text_amount.text = String(orders[indexPath.row].amount!) + "份"
+        cell.text_amount.text = String(orders[indexPath.row].amount!)
         cell.text_price.text = String(price!) + "元"
         cell.text_sum.text = String(orders[indexPath.row].amount! * price!) + "元"
+        cell.price = price!
         // Configure the cell...
         sum = sum! + ( amount * price!)
         text_sum.text = "總計 = " + String(sum!) + "元"
+        cell.viewController = self
         return cell
     }
     
@@ -146,7 +148,30 @@ class ComfirmTableViewController: UITableViewController {
         
     }
     
-    
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        let shareAction = UITableViewRowAction(style: .default, title: "Share", handler:{(action, indexPath) -> Void in
+            /*let shareText = "Just checking in at " + restaurants[indexPath.row].name!
+             if let shareImage = UIImage(named: restaurants[indexPath.row].image!){
+             let activityController = UIActivityViewController(activityItems: [shareText, shareImage], applicationActivities: nil)
+             self.present(activityController, animated: true, completion: nil)
+             }  else {
+             let activityController = UIActivityViewController(activityItems: [shareText], applicationActivities: nil)
+             self.present(activityController, animated: true, completion: nil)
+             }*/
+        })
+        
+        let deletAction = UITableViewRowAction(style: .default, title: "Delete", handler: {(action, indexPath) -> Void in
+            //estaurants.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .fade)
+        })
+        
+        shareAction.backgroundColor = UIColor(red: 23.0/255.0, green: 200.0/255.0, blue: 120.0/255.0, alpha: 0.5)
+        deletAction.backgroundColor = UIColor.red
+        
+        return [deletAction ]
+        
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

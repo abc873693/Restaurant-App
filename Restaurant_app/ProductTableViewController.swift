@@ -12,7 +12,7 @@ import FirebaseAuth
 
 
 class ProductTableViewController: UITableViewController, URLSessionDelegate {
-    
+    var slect_index:Int = 0
     var type = ""
     var Products = [(Product)]()
     
@@ -60,7 +60,7 @@ class ProductTableViewController: UITableViewController, URLSessionDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "product_cell", for: indexPath)as! ProductTableViewCell
         let index = indexPath.row
         cell.text_name.text = Products[index].name
-        print( Products[index].name! + "  " + String(Products[index].single!))
+        print( Products[index].name!)
         let large = (Products[index].price_large! != 0) ? "大:" + String(Products[index].price_large!) : ""
         let medium = (Products[index].price_medium! != 0) ? "中:" + String(Products[index].price_medium!) : ""
         let small = (Products[index].price_small! != 0) ? "小:" + String(Products[index].price_small!) : ""
@@ -98,6 +98,19 @@ class ProductTableViewController: UITableViewController, URLSessionDelegate {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        let editAction = UITableViewRowAction(style: .default, title: "編輯", handler: {(action, indexPath) -> Void in
+            self.slect_index = indexPath.row
+            self.performSegue(withIdentifier: "edit_product", sender: self)
+            
+        })
+        
+        editAction.backgroundColor = UIColor.green
+        return [editAction ]
+        
+    }
+    
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL)-> UIImage {
         
         guard let imageData = try? Data(contentsOf: location) else {
@@ -107,52 +120,26 @@ class ProductTableViewController: UITableViewController, URLSessionDelegate {
         return image!
     }
     
+    @IBAction func action_add(_ sender: UIBarButtonItem) {
+        self.performSegue(withIdentifier: "add_product", sender: self)
+    }
     
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
-    
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
-    
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
-    
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
-    
-    
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "show_detail" {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let destinationController = segue.destination as! DetailProductViewController
                 destinationController.item = Products[indexPath.row]
             }
+        }
+        if segue.identifier == "add_product" {
+            let destinationController = segue.destination as! EditProductViewController
+            destinationController.mode = "add"
+        }
+        if segue.identifier == "edit_product" {
+            let destinationController = segue.destination as! EditProductViewController
+            destinationController.mode = "edit"
+            destinationController.subindex = self.slect_index
+            destinationController.index = searProduct(uid: Products[self.slect_index].uid!)
         }
     }
     

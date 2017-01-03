@@ -12,7 +12,7 @@ import FirebaseAuth
 
 class ViewControllerAll: UITableViewController {
     //var ref: FIRDatabaseReference!
-    
+    var slect_index:Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.reloadData()
@@ -23,16 +23,6 @@ class ViewControllerAll: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
     func showOKDialog(title:String,message:String,OKtitle:String){
         let quetion = UIAlertController(title: title, message: message, preferredStyle: .alert);
@@ -56,7 +46,22 @@ class ViewControllerAll: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        let editAction = UITableViewRowAction(style: .default, title: "編輯", handler: {(action, indexPath) -> Void in
+            self.slect_index = indexPath.row
+            self.performSegue(withIdentifier: "edit_type", sender: self)
+            
+        })
+        
+        editAction.backgroundColor = UIColor.green
+        return [editAction ]
+
+    }
     
+    @IBAction func action_add(_ sender: UIBarButtonItem) {
+        self.performSegue(withIdentifier: "add_type", sender: self)
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "show_type_products" {
@@ -64,6 +69,15 @@ class ViewControllerAll: UITableViewController {
                 let destinationController = segue.destination as! ProductTableViewController
                 destinationController.type = types[indexPath.row]
             }
+        }
+        if segue.identifier == "add_type" {
+            let destinationController = segue.destination as! EditTypeViewController
+            destinationController.mode = "add"
+        }
+        if segue.identifier == "edit_type" {
+            let destinationController = segue.destination as! EditTypeViewController
+            destinationController.mode = "edit"
+            destinationController.index = self.slect_index
         }
         
     }

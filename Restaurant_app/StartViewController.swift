@@ -94,7 +94,6 @@ class StartViewController: UIViewController {
             if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
                 
                 for snap in snapshots {
-                    // Make our jokes array for the tableView.
                     if let postDictionary = snap.value as? Dictionary<String, AnyObject> {
                         let key = snap.key
                         let model = Product()
