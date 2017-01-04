@@ -11,15 +11,11 @@ import FirebaseAuth
 import FirebaseDatabase
 
 class SettingViewController: UIViewController {
-    var username = "abc873693@rainvisitor.com"
-    var password = "123456"
-    var ref: FIRDatabaseReference!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ref = FIRDatabase.database().reference()
         // Do any additional setup after loading the view.
     }
 
@@ -28,33 +24,31 @@ class SettingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func register(_ sender: Any) {
-        FIRAuth.auth()?.signIn(withEmail: username, password: password) { (user, error) in
-            if user?.email != nil {
-                let quetion = UIAlertController(title: "firebase", message: "登入成功", preferredStyle: .alert);
-                //新增選項
-                let OKaction = UIAlertAction(title: "好", style: .default , handler:nil);
-                //把選項加到UIAlertController
-                quetion.addAction(OKaction);
-                //Show
-                self.present(quetion, animated: true, completion: nil);
-                self.ref.child("users").child((user?.uid)!).setValue(["username": self.username])
-            }
-            else {
-                let quetion = UIAlertController(title: "firebase", message: "創建失敗", preferredStyle: .alert);
-                //新增選項
-                let OKaction = UIAlertAction(title: "好", style: .default , handler:nil);
-                //把選項加到UIAlertController
-                quetion.addAction(OKaction);
-                //Show
-                self.present(quetion, animated: true, completion: nil);
-            }
+    @IBAction func action_myOder(_ sender: UIButton) {
+        if getStatusValue(){
+            self.performSegue(withIdentifier: "my_order", sender: self)
         }
-
+        else {
+            let quetion = UIAlertController(title: "警告", message: "尚未有訂單", preferredStyle: .alert);
+            //新增選項
+            let OKaction = UIAlertAction(title: "好", style: .default , handler: nil);
+            quetion.addAction(OKaction);
+            //Show
+            self.present(quetion, animated: true, completion: nil);
+        }
+        print("\(getStatusValue())")
     }
     
     @IBAction func backstage(_ sender: UIButton) {
         self.performSegue(withIdentifier: "into_back", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "my_order" {
+            let destinationController = segue.destination as! MyOrderViewController
+            let token = getSettingValue()
+            destinationController.Order_token = Int(token)!
+        }
     }
     /*
     // MARK: - Navigation

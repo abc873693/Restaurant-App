@@ -1,5 +1,5 @@
 //
-//  OrderDetailViewController.swift
+//  MyOrderViewController.swift
 //  Restaurant_app
 //
 //  Created by Ray on 2017/1/4.
@@ -10,8 +10,8 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 
-class OrderDetailViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
-    
+class MyOrderViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+
     var orderForProduct = [SlectProduct]()
     var Order_token:Int = 0
     @IBOutlet weak var take_token: UILabel!
@@ -27,6 +27,11 @@ class OrderDetailViewController: UIViewController,UITableViewDelegate, UITableVi
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func action_reload(_ sender: UIBarButtonItem) {
+        getProdctData()
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -41,6 +46,7 @@ class OrderDetailViewController: UIViewController,UITableViewDelegate, UITableVi
             //let value = snapshot.value as? NSDictionary
             if let order = snapshot.childSnapshot(forPath: "\(self.Order_token)").value as? NSDictionary {
                 self.switch_state.isOn = order["status"] as? Bool ?? false
+                self.switch_state.isEnabled = false
                 let item = order["product"] as! [NSDictionary]
                 //print("\(order["product"]!)")
                 for DS in item {
@@ -58,9 +64,9 @@ class OrderDetailViewController: UIViewController,UITableViewDelegate, UITableVi
         }) { (error) in
             print(error.localizedDescription)
         }
-
+        
     }
-
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -89,6 +95,17 @@ class OrderDetailViewController: UIViewController,UITableViewDelegate, UITableVi
             break
         }
         cell.product_state.isOn = orderForProduct[index].state!
+        cell.product_state.isEnabled = false
         return cell
     }
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
 }

@@ -17,6 +17,7 @@
 		71270EAB1E1BCB0B00124B92 /* OrderDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71270EAA1E1BCB0B00124B92 /* OrderDetailTableViewCell.swift */; };
 		71270EAD1E1C323D00124B92 /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71270EAC1E1C323D00124B92 /* OrderDetailViewController.swift */; };
 		71270EAF1E1C326800124B92 /* OrderProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71270EAE1E1C326800124B92 /* OrderProductTableViewCell.swift */; };
+		71270EB11E1CABB600124B92 /* MyOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71270EB01E1CABB600124B92 /* MyOrderViewController.swift */; };
 		714E44AC1E14DB7E006189B8 /* TypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714E44AB1E14DB7E006189B8 /* TypeTableViewCell.swift */; };
 		714E44AE1E14E434006189B8 /* ProductTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714E44AD1E14E434006189B8 /* ProductTableViewController.swift */; };
 		714E44B11E14F514006189B8 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714E44B01E14F514006189B8 /* Model.swift */; };
@@ -60,6 +61,7 @@
 		71270EAA1E1BCB0B00124B92 /* OrderDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailTableViewCell.swift; sourceTree = "<group>"; };
 		71270EAC1E1C323D00124B92 /* OrderDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailViewController.swift; sourceTree = "<group>"; };
 		71270EAE1E1C326800124B92 /* OrderProductTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderProductTableViewCell.swift; sourceTree = "<group>"; };
+		71270EB01E1CABB600124B92 /* MyOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyOrderViewController.swift; sourceTree = "<group>"; };
 		714E44AB1E14DB7E006189B8 /* TypeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeTableViewCell.swift; sourceTree = "<group>"; };
 		714E44AD1E14E434006189B8 /* ProductTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTableViewController.swift; sourceTree = "<group>"; };
 		714E44B01E14F514006189B8 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 			children = (
 				71689CE81E13FE79006F627C /* SettingViewController.swift */,
 				71270E9C1E1A296200124B92 /* LoginViewController.swift */,
+				71270EB01E1CABB600124B92 /* MyOrderViewController.swift */,
 			);
 			name = Setting;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				71689CEB1E14A1FE006F627C /* Utils.swift in Sources */,
 				714E44E51E18F1DB006189B8 /* ChildOrderTableViewCell.swift in Sources */,
 				714E44B41E14FDD8006189B8 /* ProductTableViewCell.swift in Sources */,
+				71270EB11E1CABB600124B92 /* MyOrderViewController.swift in Sources */,
 				714E44AE1E14E434006189B8 /* ProductTableViewController.swift in Sources */,
 				714E44D91E15895E006189B8 /* DetailProductViewController.swift in Sources */,
 				714E44AC1E14DB7E006189B8 /* TypeTableViewCell.swift in Sources */,

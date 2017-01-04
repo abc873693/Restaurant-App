@@ -15,7 +15,6 @@ class OrderShowTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Orders.removeAll()
         getOrders()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -25,6 +24,7 @@ class OrderShowTableViewController: UITableViewController {
     }
     
     func getOrders() -> Void {
+        Orders.removeAll()
         var ref: FIRDatabaseReference!
         ref = FIRDatabase.database().reference()
         ref.child("orders").observeSingleEvent(of: .value, with: { (snapshot) in

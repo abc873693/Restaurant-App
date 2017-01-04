@@ -185,7 +185,11 @@ class FanPageTableViewController: UITableViewController, URLSessionDelegate {
             dataTask.resume()
             
         }
-        
+        if(index % 2 == 0){
+            cell.contentView.backgroundColor=UIColor.init(red: 218.0/255.0, green: 224.0/255.0, blue: 231.0/255.0, alpha: 1.0)
+        }else{
+            cell.contentView.backgroundColor=UIColor.init(red: 231.0/255.0, green: 235.0/255.0, blue: 238.0/255.0, alpha: 1.0)
+        }
         return cell
     }
 

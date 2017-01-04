@@ -30,11 +30,13 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GU4-uV-n0S">
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.70612958280000004" green="0.90415429520000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="確認"/>
                                 <connections>
                                     <action selector="action_comfirm:" destination="cSZ-2m-U3Z" eventType="touchUpInside" id="kvK-Hm-1lD"/>
                                 </connections>
                             </button>
+                            <color key="tintColor" red="0.68934180700000003" green="0.43489230940000001" blue="0.17989795159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -53,7 +55,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="98" sectionHeaderHeight="28" sectionFooterHeight="28" id="jtC-kP-67i">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.95294117649999999" green="0.87843137250000003" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="YAt-v4-bUl">
                             <rect key="frame" x="0.0" y="126" width="375" height="87"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -162,7 +164,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" red="0.95294117649999999" green="0.87843137250000003" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="text_amount" destination="if0-Dn-3K9" id="hal-Sj-cWd"/>
@@ -191,21 +193,21 @@
         <scene sceneID="lVt-z6-vKQ">
             <objects>
                 <tableViewController storyboardIdentifier="ChildOrderTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9Oj-dP-KLw" customClass="ChildOrderTableViewController" customModule="Restaurant_app" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="148" sectionHeaderHeight="18" sectionFooterHeight="18" id="2RL-9J-r8j">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="164" sectionHeaderHeight="18" sectionFooterHeight="18" id="2RL-9J-r8j">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="TIq-CJ-kyQ">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="LVx-tA-cU7">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" red="0.95294117649999999" green="0.87843137250000003" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="product_cell" rowHeight="148" id="rS3-f0-djb" customClass="ChildOrderTableViewCell" customModule="Restaurant_app" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="100" width="375" height="148"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="product_cell" rowHeight="164" id="rS3-f0-djb" customClass="ChildOrderTableViewCell" customModule="Restaurant_app" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="106" width="375" height="164"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rS3-f0-djb" id="EG0-mj-AGW">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="147"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="163"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jb0-9o-DAw">
@@ -249,6 +251,7 @@
                                             </connections>
                                         </button>
                                     </subviews>
+                                    <color key="backgroundColor" red="0.95294117647058818" green="0.8784313725490196" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="btn_add" destination="vHe-bS-fh0" id="r9B-hh-lpq"/>
@@ -396,6 +399,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" red="0.95294117649999999" green="0.87843137250000003" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="type_cell" rowHeight="75" id="xUb-vK-DW3" customClass="TypeTableViewCell" customModule="Restaurant_app" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="75"/>
@@ -413,6 +417,7 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.87843137250000003" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="text_title" destination="Wbc-Gg-bGN" id="nFl-P8-7aR"/>
                                     <segue destination="Z0c-Ar-nrR" kind="show" identifier="show_type_products" id="GKC-oL-ZKG"/>
@@ -444,6 +449,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" red="0.95294117649999999" green="0.87843137250000003" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="product_cell" rowHeight="91" id="ucO-DY-QnB" customClass="ProductTableViewCell" customModule="Restaurant_app" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="91"/>
@@ -476,7 +482,7 @@
                                         </activityIndicatorView>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.87843137250000003" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="image_main" destination="d9m-nk-RHN" id="rWt-T8-il1"/>
                                     <outlet property="indicator_image" destination="bPZ-14-z4V" id="5M4-Bb-euk"/>
@@ -547,6 +553,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9e-ea-moh">
                                 <rect key="frame" x="164" y="360" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.70612958280000004" green="0.90415429520000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="完成"/>
                                 <connections>
                                     <action selector="action_finished:" destination="kZP-gJ-xWx" eventType="touchUpInside" id="9N7-ef-Urx"/>
@@ -560,7 +567,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.95294117649999999" green="0.87843137250000003" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="edit_name" destination="HfG-o1-HUe" id="KWg-ME-JWT"/>
@@ -623,7 +630,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.95294117649999999" green="0.87843137250000003" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="indocator_image" destination="Z5l-v3-QTi" id="cU1-Ni-enU"/>
@@ -663,7 +670,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.95294117647058818" green="0.8784313725490196" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <segue destination="YzG-4C-umV" kind="show" identifier="into_menu" id="tw7-Jx-rIp"/>
@@ -680,7 +687,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="74g-6S-myL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.86056913859999995" green="0.54291629539999997" blue="0.22458325279999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="aCh-Ha-jmr" kind="relationship" relationship="viewControllers" id="8SR-XG-65z"/>
@@ -705,15 +712,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="坐落於風景秀麗的南投縣國姓鄉，還有種類百餘株梅花，綻放時美不勝收，是遊客前往惠蓀林場、泰雅渡假村必經之處，這兒標榜的是最在地濃厚的人情味及親切的服務，讓您深深感到有家的感覺，『享受真正放鬆度假的心情，在這大自然的懷抱裡，體驗濃厚的鄉土人情味』" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iYa-H0-UOD">
-                                <rect key="frame" x="69" y="246" width="236" height="293"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iYa-H0-UOD">
+                                <rect key="frame" x="44" y="381" width="287" height="237"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.95294117647058818" green="0.8784313725490196" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">       坐落於風景秀麗的南投縣國姓鄉，還有種類百餘株梅花，綻放時美不勝收，是遊客前往惠蓀林場、泰雅渡假村必經之處，這兒標榜的是最在地濃厚的人情味及親切的服務，讓您深深感到有家的感覺，『享受真正放鬆度假的心情，在這大自然的懷抱裡，體驗濃厚的鄉土人情味』</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dish1" translatesAutoresizingMaskIntoConstraints="NO" id="6mK-LN-TQq">
+                                <rect key="frame" x="67" y="85" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dish2" translatesAutoresizingMaskIntoConstraints="NO" id="QhT-Fc-pl0">
+                                <rect key="frame" x="67" y="234" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="國姓私房餐廳民宿" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ret-Bp-D8f">
+                                <rect key="frame" x="69" y="38" width="236" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.95294117647058818" green="0.8784313725490196" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="首頁" image="info_icon" id="itz-KB-8Lf"/>
                 </viewController>
@@ -756,13 +779,11 @@
                                 <rect key="frame" x="299" y="75" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="註冊"/>
-                                <connections>
-                                    <action selector="register:" destination="SYv-OY-N30" eventType="touchUpInside" id="U1X-8E-xvB"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="upX-eD-eVx">
                                 <rect key="frame" x="90" y="567" width="194" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.70612958280000004" green="0.90415429520000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="後台管理"/>
                                 <connections>
                                     <action selector="backstage:" destination="SYv-OY-N30" eventType="touchUpInside" id="peq-1D-Irr"/>
@@ -771,15 +792,19 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIv-zA-PRP">
                                 <rect key="frame" x="30" y="139" width="315" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.70612958280000004" green="0.90415429520000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="我的訂單"/>
+                                <connections>
+                                    <action selector="action_myOder:" destination="SYv-OY-N30" eventType="touchUpInside" id="Wu9-O7-bE0"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.95294117649999999" green="0.87843137250000003" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="設定" id="x3T-BV-g1L"/>
                     <connections>
                         <segue destination="jZQ-I2-gdW" kind="show" identifier="into_back" id="4uk-5O-ado"/>
-                        <segue destination="qnP-Av-jFJ" kind="show" id="Oav-gM-FqG"/>
+                        <segue destination="qnP-Av-jFJ" kind="show" identifier="my_order" id="Oav-gM-FqG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Klc-Tc-b5R" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -824,7 +849,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" red="0.86056913860103623" green="0.54291629536353148" blue="0.22458325275654886" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.95294117649999999" green="0.87843137250000003" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="edit_password" destination="cq3-rA-qfk" id="vBL-bz-KeJ"/>
@@ -867,6 +892,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTP-1h-nc1">
                                 <rect key="frame" x="217" y="274" width="90" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.87843137250000003" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Button" image="checkmenus_icon"/>
                                 <connections>
@@ -881,7 +907,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.95294117649999999" green="0.87843137250000003" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <segue destination="4IH-DJ-wp9" kind="show" identifier="into_menu" id="UwJ-Yo-JDb"/>
@@ -900,6 +926,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" red="0.95294117649999999" green="0.87843137250000003" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="order_cell" rowHeight="56" id="g2L-gN-wfd" customClass="OrderDetailTableViewCell" customModule="Restaurant_app" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="56"/>
@@ -917,6 +944,7 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.92156862750000001" green="0.79215686269999996" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="order_token" destination="Kgi-M7-eNS" id="FIu-Zd-N9q"/>
                                     <segue destination="aBm-yP-gbD" kind="show" identifier="show_order_detail" id="DxY-Ae-pFa"/>
@@ -942,12 +970,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="70" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="l2g-uh-tHL">
-                                <rect key="frame" x="0.0" y="136" width="375" height="298"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.87843137250000003" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.95294117649999999" green="0.87843137250000003" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="訂單編號 : 1725515551554" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hH3-Ec-Jy5">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="C5Q-rW-Wtw">
+                                    <rect key="frame" x="0.0" y="165" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dLg-hD-RR0">
+                                            <rect key="frame" x="306" y="-5" width="51" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </switch>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="訂單狀態" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cU4-cR-C86">
+                                            <rect key="frame" x="212" y="-3" width="86" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.95294117649999999" green="0.87843137250000003" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="product_cell" rowHeight="70" id="djM-HR-H3w" customClass="OrderProductTableViewCell" customModule="Restaurant_app" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="56" width="375" height="70"/>
+                                        <rect key="frame" x="0.0" y="77" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="djM-HR-H3w" id="T9j-TX-Raf">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
@@ -980,6 +1034,7 @@
                                                 </switch>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.92156862750000001" green="0.79215686269999996" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="product_state" destination="TXq-Ux-g4y" id="VQg-Sp-gAI"/>
                                             <outlet property="text_amount" destination="NPf-mn-Vm6" id="OC3-a4-QMg"/>
@@ -989,26 +1044,8 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="訂單編號 : 1725515551554" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hH3-Ec-Jy5">
-                                <rect key="frame" x="16" y="85" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dLg-hD-RR0">
-                                <rect key="frame" x="286" y="458" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="訂單狀態" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cU4-cR-C86">
-                                <rect key="frame" x="206" y="460" width="86" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.95294117649999999" green="0.87843137250000003" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="switch_state" destination="dLg-hD-RR0" id="RmD-uz-1El"/>
@@ -1148,13 +1185,14 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsU-GP-Rbo">
                                 <rect key="frame" x="167" y="524" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.70612958280000004" green="0.90415429520000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="完成"/>
                                 <connections>
                                     <action selector="action_finish:" destination="zUM-0v-OPh" eventType="touchUpInside" id="BSv-mZ-J8e"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.95294117649999999" green="0.87843137250000003" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="edit_name" destination="b3X-jF-FOm" id="Iab-OI-k4q"/>
@@ -1179,9 +1217,10 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fqT-5X-ykw" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="粉絲專頁" image="fanspage_icon" id="fyY-me-RBm"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FnA-1j-wfs">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="FnA-1j-wfs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.21960784310000001" green="0.31372549020000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1211,10 +1250,10 @@
             </objects>
             <point key="canvasLocation" x="424.80000000000001" y="1344.3778110944529"/>
         </scene>
-        <!--Order Detail View Controller-->
+        <!--Title-->
         <scene sceneID="VOW-tl-xtw">
             <objects>
-                <viewController id="qnP-Av-jFJ" customClass="OrderDetailViewController" customModule="Restaurant_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qnP-Av-jFJ" customClass="MyOrderViewController" customModule="Restaurant_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EF3-vt-Rbf"/>
                         <viewControllerLayoutGuide type="bottom" id="L2t-4y-MGk"/>
@@ -1224,12 +1263,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="70" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="fbe-hs-NWk">
-                                <rect key="frame" x="0.0" y="136" width="375" height="298"/>
+                                <rect key="frame" x="0.0" y="7" width="375" height="611"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.92156862750000001" green="0.79215686269999996" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="訂單編號 : 1725515551554" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jvy-B0-frR">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="epv-Ik-6nd">
+                                    <rect key="frame" x="0.0" y="165" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="訂單狀態" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AP6-Ng-nDF">
+                                            <rect key="frame" x="210" y="0.0" width="86" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UJS-66-pz4">
+                                            <rect key="frame" x="304" y="-2" width="51" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </switch>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.92156862750000001" green="0.79215686269999996" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="product_cell" rowHeight="70" id="pGG-uk-hkf" customClass="OrderProductTableViewCell" customModule="Restaurant_app" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="56" width="375" height="70"/>
+                                        <rect key="frame" x="0.0" y="77" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pGG-uk-hkf" id="uzR-NT-Qgn">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
@@ -1261,6 +1325,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </switch>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.68934180700000003" green="0.43489230940000001" blue="0.17989795159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="product_state" destination="sBk-FQ-vxu" id="4qv-0Z-AJS"/>
@@ -1271,41 +1336,32 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="訂單編號 : 1725515551554" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvy-B0-frR">
-                                <rect key="frame" x="16" y="85" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UJS-66-pz4">
-                                <rect key="frame" x="286" y="458" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="訂單狀態" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AP6-Ng-nDF">
-                                <rect key="frame" x="206" y="460" width="86" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.95294117649999999" green="0.87843137250000003" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="kBP-qR-Ged">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="8gc-Pu-bTc">
+                            <connections>
+                                <action selector="action_reload:" destination="qnP-Av-jFJ" id="saT-Eb-VOs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="switch_state" destination="UJS-66-pz4" id="zel-uO-3hW"/>
-                        <outlet property="tableview_prodcut" destination="fbe-hs-NWk" id="0YH-fg-nQD"/>
-                        <outlet property="take_token" destination="jvy-B0-frR" id="fKD-aI-FDy"/>
+                        <outlet property="switch_state" destination="UJS-66-pz4" id="MDd-b2-zI6"/>
+                        <outlet property="tableview_prodcut" destination="fbe-hs-NWk" id="I6G-xW-R89"/>
+                        <outlet property="take_token" destination="jvy-B0-frR" id="ab6-r6-KtU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3P1-K5-TCx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1289" y="2132"/>
+            <point key="canvasLocation" x="1288.8" y="2131.4842578710645"/>
         </scene>
     </scenes>
     <resources>
         <image name="checkmenus_icon" width="480" height="480"/>
         <image name="checkorder_icon" width="480" height="480"/>
+        <image name="dish1" width="650" height="418"/>
+        <image name="dish2" width="650" height="427"/>
         <image name="fanspage_icon" width="30" height="30"/>
         <image name="info_icon" width="30" height="30"/>
         <image name="like" width="74" height="74"/>
@@ -1315,7 +1371,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="UEE-3M-yA6"/>
-        <segue reference="gUB-kF-qJq"/>
         <segue reference="Pn4-8i-ZjA"/>
+        <segue reference="X4P-ER-VgG"/>
     </inferredMetricsTieBreakers>
 </document>
