@@ -31,7 +31,7 @@ class OrderViewController: UIPageViewController  {
         print("orderedViewControllers count = \(orderedViewControllers.count)")
         
         if orderedViewControllers.first != nil {
-            setViewControllers([orderedViewControllers[0]], direction: .forward, animated: true, completion: nil)
+            setViewControllers([orderedViewControllers[0]], direction: .forward, animated: false, completion: nil)
         }
         tutorialDelegate?.OrderPageViewController(tutorialPageViewController:self,didUpdatePageCount: orderedViewControllers.count)
     }

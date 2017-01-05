@@ -21,7 +21,7 @@ class ChildOrderTableViewController: UITableViewController,URLSessionDelegate {
         for model in products {
             let mtype = model.type
             //let str = (mtype! + mtype!.isEqual(type))as! String
-            if mtype!.isEqual(type) {
+            if mtype!.isEqual(type) && model.status! {
                 Products.append(model)
                 
             }

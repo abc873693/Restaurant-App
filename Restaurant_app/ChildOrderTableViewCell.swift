@@ -25,29 +25,34 @@ class ChildOrderTableViewCell: UITableViewCell {
     }
 
     @IBAction func action_add(_ sender: UIButton) {
-        sender.isEnabled = false
         switch segment_price.selectedSegmentIndex {
         case 0:
             if large{
-                //showOKDialog(title:"訊息",message:"已經選過了",OKtitle:"好")
+                btn_add.setTitle("+", for: .normal)
+                large = false
             }
             else{
+                btn_add.setTitle("-", for: .normal)
                 large = true
             }
             break
         case 1:
             if medium{
-                //showOKDialog(title:"訊息",message:"已經選過了",OKtitle:"好")
+                btn_add.setTitle("+", for: .normal)
+                medium = false
             }
             else{
+                btn_add.setTitle("-", for: .normal)
                 medium = true
             }
             break
         default:
             if small{
-                //showOKDialog(title:"訊息",message:"已經選過了",OKtitle:"好")
+                btn_add.setTitle("+", for: .normal)
+                small = false
             }
             else{
+                btn_add.setTitle("-", for: .normal)
                 small = true
             }
             break
@@ -62,26 +67,26 @@ class ChildOrderTableViewCell: UITableViewCell {
         switch segment_price.selectedSegmentIndex {
         case 0:
             if large{
-                btn_add.isEnabled = false
+                btn_add.setTitle("-", for: .normal)
             }
             else{
-                btn_add.isEnabled = true
+                btn_add.setTitle("+", for: .normal)
             }
             break
         case 1:
             if medium{
-                btn_add.isEnabled = false
+                btn_add.setTitle("-", for: .normal)
             }
             else{
-                btn_add.isEnabled = true
+                btn_add.setTitle("+", for: .normal)
             }
             break
         default:
             if small{
-                btn_add.isEnabled = false
+                btn_add.setTitle("-", for: .normal)
             }
             else{
-                btn_add.isEnabled = true
+                btn_add.setTitle("+", for: .normal)
             }
             break
         }

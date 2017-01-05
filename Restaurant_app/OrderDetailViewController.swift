@@ -32,6 +32,14 @@ class OrderDetailViewController: UIViewController,UITableViewDelegate, UITableVi
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func action_update_state(_ sender: UISwitch) {
+        let token = self.Order_token
+        var ref: FIRDatabaseReference!
+        ref = FIRDatabase.database().reference()
+        let post = sender.isOn
+        let childUpdates = ["/orders/\(token)/status": post]
+        ref.updateChildValues(childUpdates)
+    }
     func getProdctData(){
         orderForProduct.removeAll()
         var ref: FIRDatabaseReference!
@@ -72,9 +80,11 @@ class OrderDetailViewController: UIViewController,UITableViewDelegate, UITableVi
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "product_cell", for: indexPath) as! OrderProductTableViewCell
+        cell.view = self
         let index = indexPath.row
         let uid = orderForProduct[index].uid
         let index_Product = searProduct(uid: uid!)
+        cell.index = index
         cell.text_name.text = "\(products[index_Product].name!)"
         cell.text_amount.text = "\(orderForProduct[index].amount!)份"
         switch orderForProduct[index].size! {

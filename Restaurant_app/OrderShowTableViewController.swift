@@ -16,6 +16,7 @@ class OrderShowTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getOrders()
+        self.navigationItem.title = "所有訂單"
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -39,6 +40,7 @@ class OrderShowTableViewController: UITableViewController {
                         print( "firebaseData :" + key)
                     }
                 }
+                self.Orders.reverse()
                 self.tableView.reloadData()
             }
             

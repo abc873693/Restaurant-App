@@ -98,7 +98,17 @@ class ComfirmTableViewController: UITableViewController {
     
 
     @IBAction func SendData(_ sender: Any) {
-        if !getStatusValue() {
+        if orders.count == 0{
+            let quetion = UIAlertController(title: "警告", message: "尚未有任何菜單", preferredStyle: .alert);
+            //新增選項
+            let OKaction = UIAlertAction(title: "好", style: .default , handler:{(action: UIAlertAction!) in
+                
+            });
+            //把選項加到UIAlertController
+            quetion.addAction(OKaction);
+            self.present(quetion, animated: true, completion: nil);
+        }
+        else if !getStatusValue() {
             let now = NSDate()
             let current_token = String(Int(now.timeIntervalSince1970 * 100000))
             Set_SettingPlist_Value(value: current_token)
@@ -112,6 +122,14 @@ class ComfirmTableViewController: UITableViewController {
                 product.child("size").setValue(model.size)
                 ref.child("orders").child(current_token).child("status").setValue(true)
             }
+            let quetion = UIAlertController(title: "提示", message: "已經生成菜單\n訂單編號:\(current_token)", preferredStyle: .alert);
+            //新增選項
+            let OKaction = UIAlertAction(title: "好", style: .default , handler:{(action: UIAlertAction!) in
+                
+            });
+            //把選項加到UIAlertController
+            quetion.addAction(OKaction);
+            self.present(quetion, animated: true, completion: nil);
         }
         else {
             let quetion = UIAlertController(title: "提示", message: "已經生成菜單", preferredStyle: .alert);
@@ -150,25 +168,14 @@ class ComfirmTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         
-        let shareAction = UITableViewRowAction(style: .default, title: "Share", handler:{(action, indexPath) -> Void in
-            /*let shareText = "Just checking in at " + restaurants[indexPath.row].name!
-             if let shareImage = UIImage(named: restaurants[indexPath.row].image!){
-             let activityController = UIActivityViewController(activityItems: [shareText, shareImage], applicationActivities: nil)
-             self.present(activityController, animated: true, completion: nil)
-             }  else {
-             let activityController = UIActivityViewController(activityItems: [shareText], applicationActivities: nil)
-             self.present(activityController, animated: true, completion: nil)
-             }*/
-        })
-        
-        let deletAction = UITableViewRowAction(style: .default, title: "Delete", handler: {(action, indexPath) -> Void in
-            //estaurants.remove(at: indexPath.row)
+        let deletAction = UITableViewRowAction(style: .default, title: "刪除", handler: {(action, indexPath) -> Void in
+            let cell = tableView.cellForRow(at: indexPath)as! OrderTableViewCell
+            orders.remove(at: indexPath.row)
+            self.sum = self.sum! - (cell.amount * cell.price)
+            self.text_sum.text = "總計 = " + String(self.sum!) + "元"
             self.tableView.deleteRows(at: [indexPath], with: .fade)
         })
-        
-        shareAction.backgroundColor = UIColor(red: 23.0/255.0, green: 200.0/255.0, blue: 120.0/255.0, alpha: 0.5)
         deletAction.backgroundColor = UIColor.red
-        
         return [deletAction ]
         
     }

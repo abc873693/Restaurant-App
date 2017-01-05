@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class OrderProductTableViewCell: UITableViewCell {
 
+    var view:OrderDetailViewController?
+    var index:Int? = 0
     @IBOutlet weak var text_name: UILabel!
     @IBOutlet weak var text_amount: UILabel!
     @IBOutlet weak var text_size: UILabel!
@@ -25,5 +29,20 @@ class OrderProductTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    @IBAction func action_enable_product(_ sender: UISwitch) {
+        let token = view?.Order_token
+        view?.orderForProduct[index!].state = sender.isOn
+        let model = (view?.orderForProduct[index!])! as SlectProduct
+        var ref: FIRDatabaseReference!
+        ref = FIRDatabase.database().reference()
+        let post = ["amount": model.amount!,
+                    "size": model.size!,
+                    "uid": model.uid!,
+                    "state": model.state!] as [String : Any]
+        let childUpdates = ["/orders/\(token!)/product/\(index!)": post]
+        ref.updateChildValues(childUpdates)
+    }
+    
 
 }

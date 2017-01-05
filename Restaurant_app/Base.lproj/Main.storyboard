@@ -60,7 +60,7 @@
                             <rect key="frame" x="0.0" y="126" width="375" height="70"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uTc-Jh-to8">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="總計０元" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uTc-Jh-to8">
                                     <rect key="frame" x="35" y="25" width="203" height="21"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="26"/>
@@ -100,7 +100,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="98"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="C7z-8M-0vT" id="fFq-7G-7li">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="98"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="97"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="450元" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aty-Y3-IJ6">
@@ -253,7 +253,7 @@
                                             <rect key="frame" x="312" y="25" width="46" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" red="0.70612958282974847" green="0.90415429515402224" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                            <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="38"/>
                                             <state key="normal" title="+"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
@@ -307,11 +307,11 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="398"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="J3l-zN-OEN" id="xUL-EU-tWp">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="398"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="397"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3c-Wm-N15">
-                                            <rect key="frame" x="7" y="69" width="356" height="48"/>
+                                            <rect key="frame" x="6" y="69" width="357" height="46"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -398,7 +398,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cTk-xg-VxJ" id="tbM-Ph-zo9">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -427,7 +427,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xUb-vK-DW3" id="uNm-Jc-JDR">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wbc-Gg-bGN">
@@ -782,7 +782,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="981-l2-bxQ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="點菜" image="menus_icon" id="ey6-a7-M2g"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="PAU-Ij-5jW">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PAU-Ij-5jW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -795,7 +795,7 @@
             </objects>
             <point key="canvasLocation" x="2097" y="-81"/>
         </scene>
-        <!--設定-->
+        <!--管理-->
         <scene sceneID="OMH-bX-0sN">
             <objects>
                 <viewController id="SYv-OY-N30" customClass="SettingViewController" customModule="Restaurant_app" customModuleProvider="target" sceneMemberID="viewController">
@@ -825,16 +825,10 @@
                                     <action selector="action_myOder:" destination="SYv-OY-N30" eventType="touchUpInside" id="Wu9-O7-bE0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOu-Yr-K5a">
-                                <rect key="frame" x="299" y="91" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.70612958280000004" green="0.90415429520000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="註冊"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.95165890460000002" green="0.87994581459999999" blue="0.78600132469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="設定" id="x3T-BV-g1L"/>
+                    <navigationItem key="navigationItem" title="管理" id="x3T-BV-g1L"/>
                     <connections>
                         <segue destination="jZQ-I2-gdW" kind="show" identifier="into_back" id="4uk-5O-ado"/>
                         <segue destination="qnP-Av-jFJ" kind="show" identifier="my_order" id="Oav-gM-FqG"/>
@@ -965,7 +959,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="56"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g2L-gN-wfd" id="2hn-ab-BFt">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kgi-M7-eNS">
@@ -1020,12 +1014,15 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="C5Q-rW-Wtw">
-                                    <rect key="frame" x="0.0" y="164.5" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="165" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dLg-hD-RR0">
                                             <rect key="frame" x="306" y="-5" width="51" height="31"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <action selector="action_update_state:" destination="aBm-yP-gbD" eventType="valueChanged" id="EYk-0d-BEu"/>
+                                            </connections>
                                         </switch>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="訂單狀態" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cU4-cR-C86">
                                             <rect key="frame" x="212" y="-3" width="86" height="26"/>
@@ -1069,6 +1066,9 @@
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TXq-Ux-g4y">
                                                     <rect key="frame" x="299" y="19" width="51" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="action_enable_product:" destination="djM-HR-H3w" eventType="valueChanged" id="ydq-Bd-vdf"/>
+                                                    </connections>
                                                 </switch>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vQg-tH-GNG">
                                                     <rect key="frame" x="0.0" y="68" width="375" height="1"/>
@@ -1260,7 +1260,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fqT-5X-ykw" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="粉絲專頁" image="fanspage_icon" id="fyY-me-RBm"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="FnA-1j-wfs">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FnA-1j-wfs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.21960784310000001" green="0.31372549020000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1274,13 +1274,13 @@
             </objects>
             <point key="canvasLocation" x="1257" y="621"/>
         </scene>
-        <!--設定-->
+        <!--管理-->
         <scene sceneID="Ig3-vX-nrn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gd3-8e-Hd7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="設定" image="setting_icon" id="CQj-JV-VOb"/>
+                    <tabBarItem key="tabBarItem" title="管理" image="setting_icon" id="CQj-JV-VOb"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="bEe-U1-DKe">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bEe-U1-DKe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1391,7 +1391,8 @@
                         <color key="backgroundColor" red="0.95165890460000002" green="0.87994581459999999" blue="0.78600132469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="我的訂單" id="kBP-qR-Ged">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="8gc-Pu-bTc">
+                        <barButtonItem key="rightBarButtonItem" image="refresh_icon" id="8gc-Pu-bTc">
+                            <inset key="imageInsets" minX="8" minY="8" maxX="8" maxY="8"/>
                             <connections>
                                 <action selector="action_reload:" destination="qnP-Av-jFJ" id="saT-Eb-VOs"/>
                             </connections>
@@ -1418,6 +1419,7 @@
         <image name="like" width="74" height="74"/>
         <image name="menus_icon" width="30" height="30"/>
         <image name="page_icon" width="487" height="487"/>
+        <image name="refresh_icon" width="50" height="50"/>
         <image name="setting_icon" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
